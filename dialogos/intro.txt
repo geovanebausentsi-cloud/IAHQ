@@ -1,0 +1,26 @@
+ajuste as falas
+[
+  {
+    "panel": 1,
+    "character": "ITA",
+    "dialogue": "Você não acha que... a cada dia a vida vem se tornando tão irreal, de um segundo pra cá tudo era feio e caótico, mas agora tudo está perfeito e em harmonia."
+  },
+  {
+    "panel": 2,
+    "character": "MARI",
+    "action": "Silêncio.",
+    "sfx": "..."
+  },
+  {
+    "panel": 3,
+    "character": "Os Dois",
+    "action": "Silêncio."
+  },
+  {
+    "panel": 4,
+    "character": "MARI",
+    "dialogue": "Harmonia... ou uma ilusão bem construída? Às vezes, a perfeição é o disfarce mais assustador."
+  }
+]
+
+agora na proxima cena adcione os balões
