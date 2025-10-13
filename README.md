@@ -18,5 +18,5 @@ Nosso protagonista, Ita, um ex-engenheiro de algoritmos que perdeu sua licença 
 
 Ita agora precisa viver abaixo dos radares da XcellCorp, que agora está usando a IA para monitoramento total de sua vida.
 
-No Brasil ele encontra uma aliada: Mari, uma netrunner que utiliza IAs de código aberto e "artefatos digitais" proibidos. Juntos, eles pretender se esconder e roubar o Núcleo do Algoritmo da XCellCorp caso eles não os deixem viver suas vidas em paz e anonimato.
+No Brasil ele encontra uma aliada: Coral, uma netrunner que utiliza IAs de código aberto e "artefatos digitais" proibidos. Juntos, eles pretender se esconder e roubar o Núcleo do Algoritmo da XCellCorp caso eles não os deixem viver suas vidas em paz e anonimato.
 
