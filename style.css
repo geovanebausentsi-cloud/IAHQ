@@ -1,95 +1,71 @@
+/* style.css */
 
-        body {
-            background-color: #1a1a1a;
-            color: #e0e0e0;
-            font-family: 'Courier New', Courier, monospace;
-            margin: 0;
-            padding: 0;
-        }
+/* Reset Básico */
+body {
+    background-color: #0d0d0d; /* Fundo bem escuro */
+    color: #00ff00; /* Texto verde neon (clássico terminal) */
+    font-family: 'Consolas', 'Courier New', monospace; /* Fonte monoespaçada */
+    margin: 0;
+    padding: 20px;
+    height: 100vh;
+    overflow: hidden; /* Evita a barra de rolagem do body */
+    font-size: 14px;
+}
 
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-        }
+/* Container Principal do Terminal */
+#terminal-container {
+    max-width: 900px;
+    height: 100%;
+    margin: 0 auto;
+    border: 2px solid #00ff00; /* Borda neon sutil */
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.5); /* Efeito de brilho */
+    display: flex;
+    flex-direction: column;
+}
 
-        header {
-            text-align: center;
-            margin-bottom: 40px;
-            position: relative;
-        }
+/* Área de Conteúdo (Display de Output) */
+#content-area {
+    flex-grow: 1; /* Ocupa todo o espaço vertical disponível */
+    padding: 10px;
+    overflow-y: auto; /* Permite rolar apenas a área de conteúdo */
+    /* Estilo "glitch/ruído" sutil */
+    text-shadow: 0 0 2px #00ff00;
+}
 
-        header h1 {
-            font-size: 3em;
-            color: #ff00ff;
-            text-shadow: 0 0 10px #ff00ff;
-        }
+/* Estilo para cada linha (comando ou output) */
+.line, .output {
+    white-space: pre-wrap; /* Mantém a formatação e quebra de linha */
+    line-height: 1.4;
+}
 
-        header p {
-            font-size: 1.2em;
-        }
+/* O Prompt de Comando (O indicador $) */
+.prompt {
+    color: #00ffff; /* Ciano/Azul para destacar o prompt */
+    font-weight: bold;
+}
 
-        .navbar {
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
-            border-radius: 10px;
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            padding: 10px 20px;
-            margin-top: 20px;
-            display: inline-block;
-        }
+/* A Linha de Entrada do Usuário */
+#input-line {
+    display: flex;
+    padding: 10px;
+    border-top: 1px solid rgba(0, 255, 0, 0.3);
+}
 
-        .nav-list {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            display: flex;
-            gap: 20px;
-        }
+#input-field {
+    flex-grow: 1;
+    background: none;
+    border: none;
+    color: #ffffff; /* Cor branca para o texto que está sendo digitado */
+    font-family: inherit;
+    font-size: inherit;
+    outline: none; /* Remove o contorno padrão do foco */
+    caret-color: #ffffff; /* Cor do cursor piscando */
+    padding: 0;
+    margin-left: 5px; /* Pequeno espaçamento após o prompt */
+}
 
-        .nav-list li a {
-            color: #e0e0e0;
-            text-decoration: none;
-            font-size: 1.2em;
-            padding: 10px 15px;
-            border-radius: 5px;
-            transition: background 0.3s, color 0.3s;
-        }
-
-        .nav-list li a:hover {
-            background: rgba(255, 0, 255, 0.2);
-            color: #ff00ff;
-        }
-
-        .main-content {
-            display: flex;
-            flex-direction: column;
-            gap: 40px;
-        }
-
-        .story-description {
-            background-color: #2a2a2a;
-            padding: 20px;
-            border-radius: 10px;
-        }
-
-        .image-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-        }
-
-        .image-grid img {
-            width: 100%;
-            height: auto;
-            border-radius: 10px;
-            border: 2px solid #ff00ff;
-        }
-
-        footer {
-            text-align: center;
-            margin-top: 40px;
-            padding-top: 20px;
-            border-top: 1px solid #444;
-        }
+/* Estilo de Mensagens de Erro */
+.error {
+    color: #ff3333; /* Vermelho para erros */
+    font-weight: bold;
+}

@@ -1,0 +1,48 @@
+[
+  {
+    "panel": 1,
+    "character": "ITA",
+    "dialogue": "Você não acha que... a cada dia a vida vem se tornando tão irreal? De um segundo pra cá tudo era feio e caótico, mas agora... tudo está perfeito e em harmonia."
+  },
+  {
+    "panel": 2,
+    "character": "MARI",
+    "action": "Silêncio.",
+    "sfx": "..."
+  },
+  {
+    "panel": 3,
+    "character": "Os Dois",
+    "action": "Silêncio."
+  },
+  {
+    "panel": 4,
+    "character": "MARI",
+    "dialogue": "Harmonia... ou uma ilusão bem construída? Às vezes, a perfeição é o disfarce mais assustador."
+  },
+  {
+    "panel": 4,
+    "character": "ITA",
+    "dialogue": "Eu acredito que haja uma harmonia... mesmo que momentânea. O fato de existir ilusão e não-ilusão ao mesmo tempo é o que nos faz buscar a perfeição, decifrar o disfarce."
+  },
+  {
+    "scene": 2,
+    "panel": 5,
+    "character": "NARRADOR",
+    "dialogue": "Enquanto isso, nos arranha-céus da XCellCorp, um alerta silencioso pisca em um monitor."
+  },
+  {
+    "panel": 6,
+    "character": "ANALISTA",
+    "balloon_type": "thought",
+    "dialogue": "Anomalia detectada... um padrão de dados que não deveria existir. Ele está aqui."
+  },
+  {
+    "panel": 7,
+    "character": "SUPERVISOR (via comunicador)",
+    "balloon_type": "radio",
+    "dialogue": "Ative o protocolo 'Sombra'. Quero todas as unidades de caça na Cidade Baixa. AGORA."
+  }
+]
+
+agora na proxima cena adcione os balões

@@ -1,0 +1,46 @@
+@startuml
+
+skinparam classAttributeIconSize 0
+
+class Terminal {
+  - contentElement: HTMLElement
+  - inputElement: HTMLElement
+  - commandHandler: CommandHandler
+  + printLine(prompt: string, command: string): void
+  + printOutput(text: string): void
+  + clear(): void
+  + setInputEnabled(enabled: boolean): void
+}
+
+class CommandHandler {
+  - terminal: Terminal
+  - commands: Map<string, Command>
+  + execute(commandString: string): void
+  + registerCommand(name: string, command: Command): void
+}
+
+abstract class Command {
+  # terminal: Terminal
+  + Command(terminal: Terminal)
+  + {abstract} execute(args: string[]): void
+}
+
+class HelpCommand extends Command {}
+class ClearCommand extends Command {}
+class ExitCommand extends Command {}
+class GalleryCommand extends Command {
+  - images: any[]
+  - currentImageIndex: number
+  + execute(args: string[]): void
+}
+class CharactersCommand extends Command {}
+class StoryCommand extends Command {}
+
+Terminal "1" *-- "1" CommandHandler
+CommandHandler "1" *-- "many" Command
+
+Terminal ..> CommandHandler : delegates execution
+CommandHandler ..> Command : executes
+Command ..> Terminal : interacts with
+
+@enduml

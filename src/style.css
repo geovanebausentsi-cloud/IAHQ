@@ -1,0 +1,142 @@
+/* style.css - Terminal Cyberpunk Distópico */
+
+/* Variáveis de Cores para fácil manutenção */
+:root {
+    --color-bg-dark: #0A0A0E;         /* Fundo preto quase azulado/roxo */
+    --color-text-main: #00FFFF;       /* Ciano elétrico (High-Tech / Status OK) */
+    --color-prompt: #FF00FF;          /* Magenta/Roxo neon (Destaque do Prompt) */
+    --color-error: #FF3333;           /* Vermelho de Urgência/Erro */
+    --color-input-text: #FFFFFF;      /* Branco para o texto digitado */
+    --font-terminal: 'Consolas', 'Courier New', monospace;
+}
+
+/* -------------------------------------- */
+/* 1. ESTILIZAÇÃO GERAL E BACKGROUND      */
+/* -------------------------------------- */
+
+body {
+    background-color: var(--color-bg-dark);
+    color: var(--color-text-main);
+    font-family: var(--font-terminal);
+    margin: 0;
+    padding: 10px;
+    height: 100vh;
+    overflow: hidden; 
+    font-size: 14px;
+    
+    /* Efeito sutil de 'scrolling' de tela antiga */
+    background-image: linear-gradient(
+        rgba(0, 255, 255, 0.05) 1px, 
+        transparent 1px
+    );
+    background-size: 100% 4px; /* Linhas horizontais fracas */
+}
+
+/* -------------------------------------- */
+/* 2. CONTAINER E EFEITO NEON/BRILHO      */
+/* -------------------------------------- */
+
+#terminal-container {
+    max-width: 900px;
+    height: 100%;
+    margin: 0 auto;
+    background-color: rgba(0, 0, 0, 0.8); /* Fundo semi-transparente */
+    border: 1px solid var(--color-prompt); 
+    
+    /* Brilho neon sutil na borda e no texto */
+    box-shadow: 
+        0 0 5px var(--color-prompt),
+        inset 0 0 5px var(--color-prompt); 
+}
+
+/* Aplica o brilho sutil em todo o texto principal */
+.line, .output, .error {
+    text-shadow: 0 0 1px var(--color-text-main);
+    line-height: 1.4;
+    white-space: pre-wrap;
+}
+
+/* -------------------------------------- */
+/* 3. ÁREAS DE CONTEÚDO E INPUT           */
+/* -------------------------------------- */
+
+#content-area {
+    padding: 15px;
+    overflow-y: auto; 
+    height: calc(100% - 30px);
+}
+
+/* Estilo do Prompt de Comando (TRASH-PUNK $) */
+.prompt {
+    color: var(--color-prompt); 
+    font-weight: bold;
+    /* Destaque adicional para o prompt */
+    text-shadow: 0 0 3px var(--color-prompt);
+}
+
+/* Linha de Entrada do Usuário */
+#input-line {
+    display: flex;
+}
+
+#input-field {
+    flex-grow: 1;
+    background: none;
+    border: none;
+    color: var(--color-input-text); 
+    font-family: inherit;
+    font-size: inherit;
+    outline: none; 
+    caret-color: var(--color-input-text); /* Cor do cursor piscando */
+    padding: 0;
+    margin-left: 5px; 
+}
+
+/* -------------------------------------- */
+/* 4. MENSAGENS E FEEDBACK                */
+/* -------------------------------------- */
+
+/* Mensagens de Erro (Dystopia) */
+.error {
+    color: var(--color-error); 
+    font-weight: bold;
+    /* Efeito de glitch para erros */
+    text-shadow: 1px 1px 0 #00ffff, -1px -1px 0 #ff00ff;
+    animation: blink-error 1s steps(1, end) infinite;
+}
+
+/* Efeito de piscada para erros */
+@keyframes blink-error {
+    50% {
+        opacity: 0.7;
+    }
+}
+
+/* Estilo para links ou dados importantes */
+.output a {
+    color: var(--color-prompt); 
+    text-decoration: none;
+}
+.output a:hover {
+    text-decoration: underline;
+}
+
+/* -------------------------------------- */
+/* 5. ESTILOS DA GALERIA DE IMAGENS       */
+/* -------------------------------------- */
+
+.gallery-image {
+    max-width: 100%;
+    border: 1px solid var(--color-text-main);
+    box-shadow: 0 0 8px var(--color-text-main);
+    margin: 10px 0;
+}
+
+/* Esconder a barra de rolagem (opcional, para um look mais limpo) */
+#content-area::-webkit-scrollbar {
+    display: none;
+}
+#content-area {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
